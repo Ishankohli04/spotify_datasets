@@ -74,14 +74,14 @@ In advanced stages, the focus shifts to improving query performance. Some optimi
 3. Get the total number of comments for tracks where `licensed = TRUE`.
 4. Find all tracks that belong to the album type `single`.
 5. **Count the total number of tracks by each artist.**
-      ```sql
+ ```sql
 select 
     artist , ---1
 	count(*) as total_no_of_songs --2
 from spotify 
 group by artist 
 order by 2 
-      ```
+ ```
 
 
 
@@ -91,7 +91,7 @@ order by 2
 3. List all tracks along with their views and likes where `official_video = TRUE`.
 4. For each album, calculate the total views of all associated tracks.
 5. **Retrieve the track names that have been streamed on Spotify more than YouTube.**
-   ```sql
+```sql
    select * from
 (select
      track,
@@ -104,7 +104,7 @@ group by 1
 where streamed_on_spotify > streamed_on_youtube
       and
 	  streamed_on_youtube <> 0;
-   ```
+```
 
 
 ### Advanced Level
@@ -126,7 +126,6 @@ select
 	highest_energy - lowest_energy as diff_in_energy
 from cte
 order by 2 desc
-
 ```
    
 5. Find tracks where the energy-to-liveness ratio is greater than 1.2.
