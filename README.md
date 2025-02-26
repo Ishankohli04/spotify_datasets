@@ -92,7 +92,7 @@ order by 2
 4. For each album, calculate the total views of all associated tracks.
 5. **Retrieve the track names that have been streamed on Spotify more than YouTube.**
 ```sql
-   select * from
+select * from
 (select
      track,
 	 -- most_played_on
